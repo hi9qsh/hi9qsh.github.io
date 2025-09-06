@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Letter</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Pen+Script" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #FFF8E7;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        
+        .see-letter-btn {
+            background: #800020;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-family: 'Indie Flower';
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .see-letter-btn:hover {
+            background: #a0002a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .aletter {
+            width: 900px;
+            height: auto;
+            border: 1px solid grey;
+            margin: 0 auto;
+            padding: 50px;
+            font-family: 'Nanum Pen Script';
+            font-size: 20px;
+            color: #800020;
+            line-height: 30px;
+            text-align: justify;
+            background-image: url(http://www.publicdomainpictures.net/pictures/40000/velka/paper-texture-1359509235aJV.jpg);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transform: translateY(50px);
+            opacity: 0;
+            display: none;
+        }
+
+ 
+        .aletter.show {
+            display: block;
+            animation: slideUp 1.2s ease-out forwards;
+        }
+
+        .jill {
+            width: 190px;
+            height: 20px;
+            color: #800020;
+            font-family: 'Indie Flower';
+            font-size: 40px; /* reduced from 50px to 40px */
+            transform: rotate(-5deg);
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <button class="see-letter-btn" onclick="showLetter()">Open</button>
+    
+    <div class="aletter" id="letter">
+        <div class="jill">Jill,</div><br>
+			I know I wasn't able to prepare anything fancy. No extravagant surprises, no big celebrations—but I wanted to give you something honest. Something that 
+			comes straight from the heart. So here I am, writing you this letter the same way I write my code: raw, real, and straight from the source. No filters, 
+			no pretenses—just me, reaching out to you in the best way I know how. <br> <br>
+
+			First of all, thank you. Thank you for staying. For choosing me every day. For showing up even when it's not easy. Thank you for being with me through 
+			this first month together, which, though short on the calendar, has already felt like something incredibly meaningful and grounding in my life. It's hard 
+			to believe that just a few weeks ago, we were strangers in the grand scheme of things—and now, you've become someone I can't imagine my days without. <br> <br>
+			
+			You've brought so much light into my life in ways I didn't even know I needed. The kind of light that doesn't just brighten a room, but warms it. With you, I feel
+			this deep, unwavering sense of peace—like I've finally found something I didn't know I'd been searching for all this time. Being with you feels like exhaling after 
+			holding my breath for far too long. You've made me feel safe. Seen. Loved in the kind of quiet but powerful way that settles the soul. And honestly, that means everything to me <br> <br>
+			
+			I love you—not just in the loud, obvious moments, but in the small, quiet ones too. In the everyday routines and in the chaos, in the laughter and in the silence. I love the way you laugh—how 
+			it's so genuine, so contagious, it feels like music. I love the way you show care—not through grand declarations, but through small, consistent acts that speak volumes. You have this quiet 
+			strength about you that anchors me, a kind of calm presence that makes everything feel less heavy. <br> <br>
+			
+			There are countless little things about you that I've fallen for—and I fall deeper every day. The way you speak, the way you think, how you notice the little details most people overlook. 
+			How you carry both kindness and depth in equal measure. You have this beautiful way of turning even the ordinary into something memorable. You make sitting in silence feel like the most comforting 
+			place to be. With you, even the most mundane moments become something I want to remember. <br> <br>
+			
+			I know this letter might not seem like much. No flowers. No fancy gifts. No elaborate plans. Just these words, written late at night with my whole heart behind them. But I hope you know that in every
+			sentence, there's love. There's intention. There's me, doing my best to show you just how much you mean to me. <br> <br>
+			
+			I want you to know I'm not just here for the celebrations or the picture-perfect moments. I'm here for the quiet nights, the stressful days, the messy middles. I'm here for the days when words don't 
+			come easy and for the moments when you just need someone to sit beside you without saying anything at all. I'll keep showing up—for all of it. I want to be your safe place, your calm in the storm, your
+			consistent presence no matter what life throws our way. <br> <br>
+			
+			I'll never get tired of reminding you how much I love you, no matter how many times or in how many ways I have to say it. You deserve to hear it as often as you need. You are endlessly lovable—more than 
+			you know, more than words can ever really capture. You are not just loved—you are treasured. Valued. Needed. And I will never stop choosing you. <br> <br>
+			
+			One month in, and a lifetime to go. I don't know what the future holds, but I do know that as long as you're in it, I'm home. <br> <br>
+
+			Happy first monthsary, my love. <br> <br>
+        <div class="jill" style="text-indent: 80px;">-Sham </div>
+    </div>
+
+    
+    <script>
+        function showLetter() {
+            const letter = document.getElementById('letter');
+            const button = document.querySelector('.see-letter-btn');
+            
+            // Hide the button
+            button.style.display = 'none';
+            
+            // Show and animate the letter
+            letter.classList.add('show');
+        }
+    </script>
+</body>
+</html>
